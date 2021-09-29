@@ -15,5 +15,10 @@
             this.quantidadeMovimentos = 0;
         }
 
+        public void incrementarMovimento()
+        {
+            quantidadeMovimentos++;
+        }
+
     }
 }
