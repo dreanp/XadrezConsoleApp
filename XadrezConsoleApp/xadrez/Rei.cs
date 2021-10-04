@@ -21,59 +21,59 @@ namespace xadrez
 
         public override bool[,] movimentosPossiveis()
         {
-            bool[,] matriz = new bool[tabuleiro.linhas, tabuleiro.colunas];
+            bool[,] mat = new bool[tabuleiro.linhas, tabuleiro.colunas];
 
-            Posicao posicao = new Posicao(0, 0);
+            Posicao pos = new Posicao(0, 0);
 
             //acima
-            posicao.definirValores(posicao.linha - 1, posicao.coluna);
-            if (tabuleiro.posicaoValida(posicao) && podeMover(posicao))
+            pos.definirValores(posicao.linha - 1, posicao.coluna);
+            if (tabuleiro.posicaoValida(pos) && podeMover(pos))
             {
-                matriz[posicao.linha, posicao.coluna] = true;
+                mat[pos.linha, pos.coluna] = true;
             }
             //ne
-            posicao.definirValores(posicao.linha - 1, posicao.coluna + 1);
-            if (tabuleiro.posicaoValida(posicao) && podeMover(posicao))
+            pos.definirValores(posicao.linha - 1, posicao.coluna + 1);
+            if (tabuleiro.posicaoValida(pos) && podeMover(pos))
             {
-                matriz[posicao.linha, posicao.coluna] = true;
+                mat[pos.linha, pos.coluna] = true;
             }
             //direita
-            posicao.definirValores(posicao.linha, posicao.coluna + 1);
-            if (tabuleiro.posicaoValida(posicao) && podeMover(posicao))
+            pos.definirValores(posicao.linha, posicao.coluna + 1);
+            if (tabuleiro.posicaoValida(pos) && podeMover(pos))
             {
-                matriz[posicao.linha, posicao.coluna] = true;
+                mat[pos.linha, pos.coluna] = true;
             }
             //se
-            posicao.definirValores(posicao.linha + 1, posicao.coluna + 1);
-            if (tabuleiro.posicaoValida(posicao) && podeMover(posicao))
+            pos.definirValores(posicao.linha + 1, posicao.coluna + 1);
+            if (tabuleiro.posicaoValida(pos) && podeMover(pos))
             {
-                matriz[posicao.linha, posicao.coluna] = true;
+                mat[pos.linha, pos.coluna] = true;
             }
             //abaixo
-            posicao.definirValores(posicao.linha + 1, posicao.coluna);
-            if (tabuleiro.posicaoValida(posicao) && podeMover(posicao))
+            pos.definirValores(posicao.linha + 1, posicao.coluna);
+            if (tabuleiro.posicaoValida(pos) && podeMover(pos))
             {
-                matriz[posicao.linha, posicao.coluna] = true;
+                mat[pos.linha, pos.coluna] = true;
             }
             //so
-            posicao.definirValores(posicao.linha + 1, posicao.coluna - 1);
-            if (tabuleiro.posicaoValida(posicao) && podeMover(posicao))
+            pos.definirValores(posicao.linha + 1, posicao.coluna - 1);
+            if (tabuleiro.posicaoValida(pos) && podeMover(pos))
             {
-                matriz[posicao.linha, posicao.coluna] = true;
+                mat[pos.linha, pos.coluna] = true;
             }
             //esquerda
-            posicao.definirValores(posicao.linha, posicao.coluna - 1);
-            if (tabuleiro.posicaoValida(posicao) && podeMover(posicao))
+            pos.definirValores(posicao.linha, posicao.coluna - 1);
+            if (tabuleiro.posicaoValida(pos) && podeMover(pos))
             {
-                matriz[posicao.linha, posicao.coluna] = true;
+                mat[pos.linha, pos.coluna] = true;
             }
             //no
-            posicao.definirValores(posicao.linha - 1, posicao.coluna - 1);
-            if (tabuleiro.posicaoValida(posicao) && podeMover(posicao))
+            pos.definirValores(posicao.linha - 1, posicao.coluna - 1);
+            if (tabuleiro.posicaoValida(pos) && podeMover(pos))
             {
-                matriz[posicao.linha, posicao.coluna] = true;
+                mat[pos.linha, pos.coluna] = true;
             }
-            return matriz;
+            return mat;
         }
     }
 }
